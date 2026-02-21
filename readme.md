@@ -31,9 +31,10 @@ We use a high-level language (like Common Lisp) as a "Metaprogramming Architect.
 * It outputs the physical memory slab (`world.bin`).
 * **The Compile-Time Handshake:** It generates a C-header (`arena_spec.h`) dictating the *exact* byte count required, ensuring the runtime allocates memory with zero waste.
 
-### Run-Time: The C Derivative
+## Run-Time: The C Derivative
 
 The C runtime is stripped of general-purpose complexity. Rather than an open-ended execution engine, it operates strictly as a Bounded Deterministic State Machine. Because the Architect forward-declares all constraints and the arena size is statically compiled, the C program is guaranteed to operate within finite, predictable bounds. It simply loads the binary image, casts the memory, and executes the state.
+
 ---
 
 ## 3. Why Pointers are Technical Debt
