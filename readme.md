@@ -73,17 +73,23 @@ Because this architecture treats data as physical space, the binary mold inheren
 Here is the consolidated navigation block for the bottom of your README. It provides a clean, self-contained table of contents that links to the specific evolutionary stages of the **Binary Hydration** architecture.
 
 
+To make these work correctly as navigation links within your GitHub repository, you should use relative paths rather than search engine URLs. GitHub automatically resolves `./filename.md` to the file in the same directory.
+
+Here is the corrected table:
+
+---
+
 ## Evolution of the Architecture
 
 This repository is structured as a progressive implementation guide in systems design. Each stage "hardens" the contract between the **Lisp Architect** and the **C Runtime**, moving safety from runtime checks to compile-time invariants.
 
 | Stage | Title | Core Architectural Level-Up |
-| --- | --- | --- |
-| **[Stage 1](https://www.google.com/search?q=./stage1.md)** | **The Symbolic Cast** | Establishing the  mapping of raw binary slabs to C structs. |
-| **[Stage 2](https://www.google.com/search?q=./stage2.md)** | **Geometric DNA** | Using Relative Offsets to create relocatable, "immortal" state machines. |
-| **[Stage 3](https://www.google.com/search?q=./stage3.md)** | **Mutation & Persistence** | Implementing "In-Place" state updates and atomic dehydration to disk. |
-| **[Stage 4](https://www.google.com/search?q=./stage4.md)** | **Arena Segmentation** | Managing multiple data sub-arenas (Text vs. Numeric) via a DNA Header. |
-| **[Stage 5](https://www.google.com/search?q=./stage5.md)** | **The Build Handshake** | Lisp-generated C headers and the introduction of `EXACT_ARENA_SIZE`. |
-| **[Stage 6](https://www.google.com/search?q=./stage6.md)** | **The Physical Fuse** | Final hardening with `_Static_assert` and terminal Sentinel verification. |
+| :--- | :--- | :--- |
+| **[Stage 1](./stage1.md)** | **The Symbolic Cast** | Establishing the $\mathcal{O}(0)$ mapping of raw binary slabs to C structs. |
+| **[Stage 2](./stage2.md)** | **Geometric DNA** | Using Relative Offsets to create relocatable, "immortal" state machines. |
+| **[Stage 3](./stage3.md)** | **Mutation & Persistence** | Implementing "In-Place" state updates and atomic dehydration to disk. |
+| **[Stage 4](./stage4.md)** | **Arena Segmentation** | Managing multiple data sub-arenas (Text vs. Numeric) via a DNA Header. |
+| **[Stage 5](./stage5.md)** | **The Build Handshake** | Lisp-generated C headers and the introduction of `EXACT_ARENA_SIZE`. |
+| **[Stage 6](./stage6.md)** | **The Physical Fuse** | Final hardening with `_Static_assert` and terminal Sentinel verification. |
 
 ---
